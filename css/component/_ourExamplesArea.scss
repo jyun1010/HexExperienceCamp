@@ -1,0 +1,271 @@
+// 產品演示
+.ourExamplesArea {
+  background-color: $textParmary;
+  border-radius: 160px;
+  padding: 160px 0;
+  @include padPro{
+    padding: 80px 0;
+    border-radius: 20px;
+    
+  }
+  @include padAir{
+    
+  }
+  h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 80px;
+    line-height: 1.2;
+    @include padPro{
+      font-size: 4rem;
+
+    }
+    @include padAir{
+      font-size: 3rem;
+      text-align: center;
+     
+      margin: 0 auto 32px;
+    }
+    @include mobile{
+      font-size: 2rem;
+      max-width: 350px;
+    }
+  }
+}
+
+.ourExamplesInput {
+  background-color: #f2f2f2;
+  padding: 12px 40px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  a {
+    display: inline-block;
+    color: #919191;
+    margin-right: 15px;
+    width: 18px;
+    height: 18px;
+    &:hover {
+      color: #000;
+    }
+  }
+  input {
+    padding: 10px;
+    border: none;
+    background-color: #f2f2f2;
+    width: calc(100% - 33px);
+    font-size: 1rem;
+    &::placeholder {
+      color: #919191;
+      font-size: 1rem;
+    }
+  }
+}
+
+.ourExampleSelectArea {
+  align-items: center;
+  flex-wrap: wrap;
+}
+.exampleSelectTool {
+  position: relative;
+  display: inline-block;
+}
+.exampleSelectTool1st{
+  @include padPro{
+     order: 1;
+  }
+ 
+}
+.exampleSelectTool2nd{
+  @include padPro{
+    order: 2;
+ }
+}
+.exampleSelectToolBtn {
+  border: 1px solid #f2f2f2;
+  padding: 20px 32px 20px 40px;
+  border-radius: 16px;
+  display: inline-block;
+  cursor: pointer;
+  color: $textSecondary;
+  i{
+    display: inline-block;
+    margin-left: 12px;
+  }
+}
+.exampleSelectTypeOptions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 5;
+  background-color: $textParmary;
+  border-radius: 16px;
+  border: 1px solid #f2f2f2;
+  display: none;
+  color: $textSecondary;
+  padding: 20px 0;
+  margin-bottom: 16px;
+  span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.75rem;
+    padding: 0px 40px 0;
+    color: #919191;;
+  }
+  a {
+    display: block;
+    padding: 8px 32px 8px 40px;
+    color: $textSecondary;
+    white-space:nowrap;
+    &:hover{
+      background-color: #F2F2F2;
+    
+    }
+  }
+ .toolLine{
+  background-color: #f2f2f2;
+ height: 2px;
+  margin: 8px 40px 24px;
+ }
+}
+.exampleSelectTypeOptions1{
+  min-width: 240px;
+}
+
+.exampleSelectFilter {
+  @include padPro{
+    width: 100%;
+    overflow-x: auto;
+    order: 3;
+    margin: 16px 0 0;
+ }
+  a {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 16px;
+    line-height: 1.5;
+    color: #919191;
+    word-break: keep-all;
+    &:hover{
+        background-color: #f2f2f2;
+    color: $textSecondary;
+    font-weight: 700;
+    }
+  }
+  .exampleSelectFilterActive{
+    background-color: #f2f2f2;
+    color: $textSecondary;
+    font-weight: 700;
+  }
+}
+
+
+// 卡片區域
+.cardArea{
+  border-radius:50px;
+  padding: 40px 0 0;
+  background-color: #fff;
+}
+.cardWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: calc(33.333% - 16px);
+  margin-right: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #f2f2f2;
+  border-radius:20px;
+  overflow:hidden;
+  background-color: #fff;
+
+  @include mobile{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+  &:hover{
+    img{
+      transform:scale(1.2);
+        transition:.5s;
+    }
+  }
+
+  &:nth-of-type(3n){
+    margin-right: 0;
+  }
+  a {
+    color: #020202;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.cardImg{
+  overflow:hidden;
+}
+
+.cardTitle {
+  @include boxStyle(5px, 8px);
+  border-bottom: 1px solid #f2f2f2;
+  height: 118px;
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+.cardInfo {
+  @include boxStyle(5px, 8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1.5;
+  border-bottom: 1px solid #f2f2f2;
+  &:last-of-type{
+    border-bottom: none;
+  }
+}
+.cardType {
+  font-weight: 700;
+}
+
+.cardShare{
+  transition:.3s;
+  &:hover{
+   filter: contrast(200%);
+    transform:scale(1.2) rotate(360deg);
+  }
+}
+
+
+.cardPaginations{
+  li + li{
+    margin-left: 4px;
+  }
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    border-radius: 16px;
+    color: $textSecondary;
+    width: 48px;
+    height: 48px;
+    
+    &:hover{
+      background-color: $textSecondary;
+    color: $textParmary;
+    }
+  }
+ 
+  a.pageActive{
+    background-color: $textSecondary;
+    color: $textParmary;
+  }
+}

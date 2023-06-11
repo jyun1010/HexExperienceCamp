@@ -1,0 +1,105 @@
+.header {
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: relative;
+  z-index: 3;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 40px;
+}
+.logo {
+ 
+  a{
+    display: block;
+    width: 245px;
+    height: 40px;
+    @include hideText;
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/9d0ceff5ed470b504331b8d897ea8518b8f163cd/2023web-camp/logo.png);
+    background-size: contain;
+    @include mobile{
+      width: 147px;
+      height: 24px;
+    }
+  }
+}
+.headerNav {
+
+    display: flex;
+    @include mobile{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+            background-color: $bgParmary;
+    }
+  .headerNavUl {
+    @include mobile {
+      flex-direction: column;
+        width: 100%;
+    }
+  }
+  a {
+    display: inline-block;
+    color: $textParmary;
+    padding: 10px;
+    &:hover {
+      background-color: $textParmary;
+      color: $bgParmary;
+    }
+    @include mobile {
+      width: 100%;
+      padding: 20px 30px;
+      border-bottom: 1px solid $textParmary ;
+    }
+  }
+}
+
+.rwdMenuBtn {
+
+  display: none;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  cursor: pointer;
+  @include mobile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  span {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: $textParmary;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: $textParmary;
+      width: 100%;
+      height: 2px;
+    }
+    &::before {
+      top: -5px;
+    }
+    &::after {
+      top: 5px;
+    }
+  }
+
+}
+.rwdMenuInput {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  &:checked {
+    & +.headerNav {
+      display: flex;
+    }
+  }
+}

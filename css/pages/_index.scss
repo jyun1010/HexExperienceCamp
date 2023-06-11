@@ -1,0 +1,409 @@
+.banner {
+  margin-bottom: 160px;
+}
+
+.bannerText {
+  color: $textParmary;
+  font-size: 7.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 40px;
+
+  @include miniLaptop{
+    font-size: 5rem;
+  }
+  @include padAir{
+    font-size: 4rem;
+  }
+  @include mobile{
+    font-size: 3rem;
+  }
+}
+.startUseBtn {
+  display: inline-block;
+  font-size: 1.25rem;
+  padding: 20px 40px;
+  border: 1px solid $textParmary;
+  color: $textParmary;
+  border-radius: 10px;
+  span{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  &:hover {
+    background-color: $textParmary;
+    color: $bgParmary;
+  }
+}
+
+.bannerGrass {
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  margin: 100px 0 160px;
+  @include mobile{
+    margin: 180px 0 120px;
+    justify-content: center;
+  }
+}
+.grassBox {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  @include mobile{
+    width: 117px;
+    height: 117px;
+  }
+  @include xsMobile{
+    width: 100px;
+    height: 100px;
+  }
+  .grass {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/deco.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.grassBox1 {
+  .grass{
+    animation: grass1 3s linear infinite;
+  }
+  
+}
+.grassBox2 {
+  .grass{
+    animation: grass2 3s linear infinite;
+  }
+}
+.grassBox3 {
+  .grass{
+    animation: grass3 3s linear infinite;
+  }
+}
+
+@keyframes grass1 {
+  0% {
+    background-position-y: 270px;
+  }
+
+  15% {
+    background-position-y: 180px;
+  }
+  35% {
+    background-position-y: 90px;
+  }
+  50% {
+    background-position-y: 0px;
+  }
+  65% {
+    background-position-y: 0px;
+  }
+  80% {
+    background-position-y: -90px;
+  }
+  100% {
+    background-position-y: -180px;
+  }
+}
+@keyframes grass2 {
+  0% {
+    background-position-y: 240px;
+}
+20% {
+    background-position-y: 130px;
+}
+45% {
+    background-position-y: 0px;
+}
+60% {
+    background-position-y: 0px;
+}
+75% {
+    background-position-y: -130px;
+}
+100% {
+    background-position-y: -240px;
+}
+}
+@keyframes grass3 {
+  0% {
+    background-position-y: 210px;
+}
+15% {
+    background-position-y: 90px;
+}
+40% {
+    background-position-y: 0px;
+}
+55% {
+    background-position-y: 0px;
+}
+65% {
+    background-position-y: -90px;
+}
+100% {
+    background-position-y: -210px;
+}
+}
+
+.ourServerArea {
+  margin-bottom: 160px;
+  @include mobile{
+    margin-bottom: 120px;
+  }
+}
+.ourServerText {
+  color: $textParmary;
+  justify-content: space-between;
+  line-height: 1.2;
+  margin-bottom: 80px;
+  @include padAir{
+    flex-direction: column;
+    margin-bottom: 48px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    @include mobile{
+      font-size: 1.25rem;
+      margin-bottom: 24px;
+    }
+  }
+  p {
+    font-size: 3rem;
+    font-weight: bold;
+    max-width: 856px;
+    @include mobile{
+      font-size: 2rem;
+    }
+  }
+}
+.ourServerList {
+  color: $textParmary;
+  @include mobile{
+    flex-direction: column;
+  }
+  li {
+    border: 1px solid #525252;
+    border-radius: 16px;
+    padding: 80px 40px;
+    margin-right: 24px;
+    width: calc((100% - 48px) / 3);
+    &:nth-of-type(3n){
+      margin-right: 0;
+    }
+
+    @include mobile{
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 12px;
+      &:nth-of-type(3n){
+        margin-bottom: 0;
+      }
+    }
+  }
+  h3 {
+    line-height: 1.2;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  p {
+    line-height: 1.5;
+  }
+}
+.ourServerIcon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+// 合作夥伴
+.ourPartnerArea {
+  position: relative;
+  margin-bottom: 160px;
+  @include mobile{
+    margin-bottom: 48px;
+  }
+  h2 {
+    color: $textParmary;
+    line-height: 1.2;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 80px;
+    @include mobile{
+      font-size: 1.25rem;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.partnerMarqee {
+  height: 40px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 15%;
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to left, transparent, #1e1e1e);
+  }
+  &::after {
+    right: 0;
+    background: linear-gradient(to right, transparent, #1e1e1e);
+  }
+
+  ul {
+    padding-left: 0;
+    display: flex;
+    list-style-type: none;
+
+    position: absolute;
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+  li {
+    white-space: nowrap;
+    margin-right: 2em;
+    font-weight: bold;
+    width: 160px;
+  }
+  img {
+    width: 160px;
+  }
+}
+.partnerMarqee1 {
+  margin-bottom: 20px;
+  ul {
+    animation: marqee1 20s linear infinite;
+  }
+}
+.partnerMarqee2 {
+  ul {
+    animation: marqee2 20s linear infinite;
+  }
+}
+
+@keyframes marqee1 {
+  0% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+
+  100% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+}
+@keyframes marqee2 {
+  0% {
+    right: 100%;
+    transform: translateX(0%);
+  }
+
+  100% {
+    right: 0%;
+    transform: translateX(100%);
+  }
+}
+
+// 評論
+.partnerComment {
+  margin-bottom: 160px;
+  @include mobile{
+    margin-bottom: 120px;
+  }
+}
+
+.partnerCommentList {
+ 
+  li {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    color: $textParmary;
+    line-height: 1.5;
+    margin-right: 24px;
+    padding: 40px;
+    min-height: 400px;
+    width: calc((100% - 48px) / 3);
+    &:nth-of-type(3n){
+      margin-right: 0;
+    }
+    
+    @include mobile{
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 12px;
+      &:nth-of-type(3n){
+        margin-bottom: 0;
+      }
+    }
+   
+  }
+  .stars {
+    margin-bottom: 22px;
+  }
+  .partnerImg {
+    margin-right: 16px;
+  }
+  .parnterName {
+    span {
+      font-size: 0.875rem;
+    }
+  }
+}
+.swiper-pagination{
+  margin: 24px 0 0;
+  @include mobile{
+    position: relative;
+  }
+}
+.swiper-pagination-bullet{
+  width: 8px;
+  height: 8px;
+  background-color: #525252;
+}
+.swiper-pagination-bullet-active{
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+}
+
+// 來建立你的服務吧
+
+.comeToAction {
+  padding: 160px 0;
+  @include mobile{
+    padding: 120px 0;
+  }
+  h3 {
+    font-size: 3rem;
+    color: $textParmary;
+    font-weight: 900;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    @include mobile{
+      font-size: 2rem;
+      max-width: 230px;
+      margin: 0 auto 32px;
+    }
+  }
+}

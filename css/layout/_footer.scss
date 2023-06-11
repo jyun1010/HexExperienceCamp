@@ -1,0 +1,49 @@
+.footer {
+    flex-wrap: wrap;
+    color: $textParmary;
+    justify-content: space-between;
+    padding: 32px 0;
+}
+
+.copyright {
+    color: #ffffff;
+    flex-grow: 1;
+    font-weight: 700;
+
+    @include mobile {
+        margin-bottom: 24px;
+        order: 1;
+    }
+}
+.sns {
+    flex-grow: 4;
+    @include mobile {
+        order: 3;
+    }
+    li {
+        margin-right: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    a {
+        display: inline-block;
+        color: $textParmary;
+        &:hover {
+            background-color: $textParmary;
+            color: $textSecondary;
+        }
+    }
+}
+
+.backToTop {
+    flex-grow: 0;
+    @include mobile {
+        order: 2;
+        margin-bottom: 24px;
+    }
+    cursor: pointer;
+    span {
+        display: inline-block;
+    }
+}

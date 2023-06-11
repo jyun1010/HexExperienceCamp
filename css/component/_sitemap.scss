@@ -1,0 +1,41 @@
+.sitemap {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 0 80px;
+    border-top: 1px solid $textParmary;
+    border-bottom: 1px solid $textParmary;
+    @include mobile{
+        padding: 80px 0;
+        flex-direction: column;
+    }
+}
+
+.sitemapText{
+    @include mobile{
+        order: 2;
+    }
+    a{
+        display: inline-block;
+        font-size: 5rem;
+        font-weight: 900;
+        color: $textParmary;
+        line-height: 1.2;
+        &:nth-of-type(1){
+            margin-bottom: 8px;
+        }
+
+        @include pad{
+            font-size: 4rem;
+        }
+        @include mobile{
+            font-size: 3rem;
+        }
+    }
+}
+
+.sitemapLogo{
+    @include mobile{
+        order: 1;
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,26 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Sono:wght@200;300;400;500;600;700;800&display=swap');
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,html{
+  font-family: 'Noto Sans TC','Sono', sans-serif;
+  background-color: $bgParmary;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+  vertical-align: top;
+}
+
+a{
+  text-decoration: none;
+}

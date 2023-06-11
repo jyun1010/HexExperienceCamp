@@ -1,0 +1,54 @@
+
+
+.container{
+  width: 95%;
+  max-width: 1296px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+}
+
+.textCenter{
+  text-align: center;
+}
+
+
+// display
+.dFlex{
+  display: flex;
+}
+.dBlock{
+  display: block;
+}
+
+// flex-direction
+.flexColumn{
+  flex-direction: column;
+}
+
+// align-items
+.alignCenter{
+  align-items: center;
+}
+.alignStart{
+  align-items: flex-start;
+}
+
+// justify-content
+.justifyCenter{
+  justify-content: center;
+}
+.justifyBetween{
+  justify-content: space-between;
+}
+.justifyStart{
+  justify-content: flex-start;
+}
+.justifyEnd{
+  justify-content: flex-end;
+}
+
+
+.mb160{
+  margin-bottom: 160px;
+}
